@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "exe2",
+      "setup": "sudo -H pip3 install -r requirements.txt",
+      "run": "pytest -k exe2",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "exe3",
+      "setup": "",
+      "run": "pytest -k exe3",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
