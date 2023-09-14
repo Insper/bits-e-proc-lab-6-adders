@@ -12,3 +12,5 @@ venv/
 toplevel.json
 toplevel.rbf
 toplevel.v
+
+*.vcd
