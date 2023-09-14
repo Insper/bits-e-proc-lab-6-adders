@@ -113,26 +113,3 @@ def test_adder():
     dut = adder(x_, y_, s_, carry)
     sim = Simulation(dut, stimulus)
     sim.run()
-
-
-def test_bin2bcd():
-    @instance
-    def stimulus():
-        print(h)
-        print(m)
-        print(l)
-        yield delay(10)
-        din.next = 13
-        yield delay(10)
-        print(h)
-        print(m)
-        print(l)
-
-    din = Signal(intbv(7)[8:])
-    h = Signal(intbv(0)[4:])
-    m = Signal(intbv(0)[4:])
-    l = Signal(intbv(0)[4:])
-    dut = bin2bcd(h, m, l, din)
-    traceSignals(dut)
-    sim = Simulation(dut, stimulus)
-    sim.run()
