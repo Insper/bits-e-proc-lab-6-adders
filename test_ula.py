@@ -3,7 +3,15 @@
 from myhdl import *
 from ula_modules import *
 
-pytestmark = pytest.mark.telemetry("23a-bits", "lab-6", "hw")
+import pytest
+import yaml
+
+try:
+    from telemetry import telemetryMark
+
+    pytestmark = telemetryMark()
+except ImportError as err:
+    print("Telemetry não importado")
 
 
 def test_halfAdder():
